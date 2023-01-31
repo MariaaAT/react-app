@@ -1,23 +1,44 @@
 import './App.css';
+import './table_style.css'
+import {useState, useEffect} from "react";
 
 function App() {
+  const [prices, setPrices] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(
+        "https://www.hvakosterstrommen.no/api/v1/prices/2023/01-31_NO5.json"
+    )
+        .then((response) => response.json())
+        .then(setPrices)
+        .then(() => setLoading(false))
+        .catch(setError);
+  }, []);
+
+    if (loading) return <h1>Loading... </h1>;
+    if (error) return <pre>{JSON.stringify(error)}</pre>;
+    if (!prices) return null;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    !prices.length ? <p>This list is empty</p> :
+        <table>
+            <tr>
+                <th>Start</th>
+                <th>End</th>
+                <th>Ore</th>
+            </tr>
+            {prices.map((item) => (
+                <tr key={item.time_start}>
+                    <td>{item.time_start}</td>
+                    <td>{item.time_end}</td>
+                    <td>{item.NOK_per_kWh}</td>
+                </tr>
+            ))
+            }
+        </table>
   );
 }
 
