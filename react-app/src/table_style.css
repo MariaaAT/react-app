@@ -1,9 +1,27 @@
 table {
-    width: 80%;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #000000;
+    border-width: thin;
+    text-align: center;
+    margin: 2%;
 }
 
-table, th, td {
-  border: 1px solid;
+th {
+    background: #36c9a4;
+    color: #ffffff;
+}
+
+.start {
+        border-radius: 15px 0px  0px 0px;
+}
+
+.ore {
+    border-radius: 0px 15px 0px 0px;
+}
+
+tr:hover {
+    background-color:#00e6ab
 }
 
 

@@ -25,11 +25,14 @@ function App() {
   return (
     !prices.length ? <p>This list is empty</p> :
         <table>
+          <thead>
             <tr>
-                <th>Start</th>
-                <th>End</th>
-                <th>Ore</th>
+                <th scope="col" class="start">Start</th>
+                <th scope="col" class="end">End</th>
+                <th scope="col" class="ore">Ore</th>
             </tr>
+          </thead>
+          <tbody>
             {prices.map((item) => (
                 <tr key={item.time_start}>
                     <td>{item.time_start}</td>
@@ -38,6 +41,7 @@ function App() {
                 </tr>
             ))
             }
+          </tbody>
         </table>
   );
 }
