@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project's Overview
+
+### Data Acquisition
+
+The energy prices data was obtained from the [Hvakosterstrommen API](https://www.hvakosterstrommen.no/strompris-api).
+Any API key was required to get the values.
+
+## Lessons learnt
+
+- [x] 
+- [x] 
+- [x] 
 
 ## Available Scripts
 
