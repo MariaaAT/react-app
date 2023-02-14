@@ -1,12 +1,14 @@
 import './App.css';
 import {useState, useEffect} from "react";
+import Plot from './components/Plot.js';
+
 
 function FormatPrices(prices, mva, omrnr) {  // This function is a formatter
     const ret = [];
     const mva_factor = (mva && !(omrnr === 4)) ? 1.25 : 1;
     const nettleie = (mva && !(omrnr === 4)) ? 32.7 : 0;
     for (let x in prices) {
-        const options = {timeZone: 'Europe/Paris'};
+        const options = {timeZone: 'Europe/Paris', timeStyle: "short"};
         ret.push({
             'time_start': new Date(prices[x].time_start).toLocaleTimeString("en-GB", options),
             'time_end': new Date(prices[x].time_end).toLocaleTimeString("en-GB", options),
@@ -64,8 +66,7 @@ function App() {
 
   return (
     !prices.length ? <p>This list is empty</p> :
-        <div className="grid">
-            <div>
+        <div>
                 <h3>Creating a table with React and styling it with css </h3>
                 <label> Select a region </label>
                 <select value={omrnr} onChange={(event) => setOmrnr(parseInt(event.target.value))}>
@@ -87,8 +88,6 @@ function App() {
                         Inkludert avgifter og mva
                     </label>
                 </fieldset>
-            </div>
-            <div>
               <table>
               <thead>
                 <tr>
@@ -108,9 +107,9 @@ function App() {
                 }
               </tbody>
             </table>
-            </div>
-    </div>
+            <Plot prices={prices} mva={mva}/>
+        </div>
   );
 }
 
-export default App;
+export default App

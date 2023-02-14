@@ -18,5 +18,12 @@
   color: #61dafb;
 }
 
+.container{
+    max-width: 576px !important;
+}
 
+h3{
+    padding-top: 20px;
+    margin: 0px 0px 20px !important;
+}
 
