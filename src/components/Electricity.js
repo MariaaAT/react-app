@@ -1,6 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from "react";
 import PlotElectricity from './PlotElectricity.js';
+import {Link} from "react-router-dom";
+
 
 
 function FormatPrices(prices, mva, omrnr) {  // This function is a formatter
@@ -67,7 +69,15 @@ function Electricity() {
   return (
     !prices.length ? <p>This list is empty</p> :
         <div>
-                <h3>Creating a table with React and styling it with css </h3>
+        <main class="container">
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/ElectricityPrices">Electricity Prices</Link></li>
+              <li><Link to="/FillingLevels">Filling Levels</Link></li>
+            </ul>
+            </nav>
+                <h3>Creating a table with React and styling it with Picocss </h3>
                 <label> Select a region </label>
                 <select value={omrnr} onChange={(event) => setOmrnr(parseInt(event.target.value))}>
                     <option value="1">Oslo / NO1 / Øst-Norge</option>
@@ -108,6 +118,7 @@ function Electricity() {
               </tbody>
             </table>
             <PlotElectricity prices={prices} mva={mva}/>
+          </main>
         </div>
   );
 }
