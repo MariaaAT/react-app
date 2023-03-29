@@ -35,16 +35,16 @@ $ npm start
 
 ## Lessons learnt
 
-- [x] useEffect and useState React Components
-- [x] Create my own components and incorporate them in the main App file
-- [x] Link components in a web navigator
-- [x] New programming tools: JavaScript, HTML5 and CSS (specifically the app was styled using Pico.css)
+- [x] useEffect and useState React Components.
+- [x] Create my own components and incorporate them in the main App file.
+- [x] Link components in a web navigator.
+- [x] New programming tools: JavaScript, HTML5 and CSS (specifically the app was styled using Pico.css).
 
 ## Future Challenges
 
 *"Perfection is attained by slow degrees; it requires the hand of time."*
                                                                         - *Voltaire*
 
-- [] Correct the week x-axis in FillingLevels.js
-- [] Improve the style
+- [] Correct the week x-axis in FillingLevels.js.
+- [] Improve the style.
 - [] Continue learning and improving!
