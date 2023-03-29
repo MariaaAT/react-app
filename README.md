@@ -45,6 +45,6 @@ $ npm start
 *"Perfection is attained by slow degrees; it requires the hand of time."*
                                                                         - *Voltaire*
 
-- [] Correct the week x-axis in FillingLevels.js.
-- [] Improve the style.
-- [] Continue learning and improving!
+- [ ] Correct the week x-axis in FillingLevels.js.
+- [ ] Improve the style.
+- [ ] Continue learning and improving!
