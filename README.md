@@ -3,7 +3,7 @@
 ## Project's Overview
 *"Knowledge does not take place"* 
 
-My interest in programming is growing day by day. This time I learnt React in order to o build more 
+My interest in programming is growing day by day. This time I learnt React, in order to build more 
 customised interactive user interfaces for the web than StreamLit or other Python libraries would allow. 
 For that I taught myself HTML5 and CSS to create custom components together with off-the-shelf open source 
 components available in the node package registry. Once again, I wanted to merge my interest in the environment 
